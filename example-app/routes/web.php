@@ -1,9 +1,6 @@
 <?php
 
-use App\Http\Controllers\MultiplyController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +12,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', function () {
-    return view('welcome'); // welcome.blade.php
+    return view('welcome');
 });
 
-Route::get('/multiple', function(){
-    return view('multiple');
+Route::get('/my-route', function(){
+    echo "<h1>My Route Page</h1>";
 });
-
-
-Route::post('/multiple', function(Request $req){
-    $data['myinput'] =  $req->input('myinput');
-    return view('multiple', $data);
-});
-
-Route::post('/result', [MultiplyController::class, 'multiply']);

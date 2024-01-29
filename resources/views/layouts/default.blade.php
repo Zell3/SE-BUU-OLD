@@ -6,29 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SE CAMP | @yield('title', '#12')</title>
 
-   <!-- Google Font: Source Sans Pro -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-   <!-- Font Awesome -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/fontawesome-free/css/all.min.css') }}">
-   <!-- daterange picker -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/daterangepicker/daterangepicker.css') }}">
-   <!-- iCheck for checkboxes and radio inputs -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-   <!-- Bootstrap Color Picker -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
-   <!-- Tempusdominus Bootstrap 4 -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
-   <!-- Select2 -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/select2/css/select2.min.css') }}">
-   <link rel="stylesheet" href="{{ url('assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-   <!-- Bootstrap4 Duallistbox -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css') }}">
-   <!-- BS Stepper -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/bs-stepper/css/bs-stepper.min.css') }}">
-   <!-- dropzonejs -->
-   <link rel="stylesheet" href="{{ url('assets/plugins/dropzone/min/dropzone.min.css') }}">
-   <!-- Theme style -->
-   <link rel="stylesheet" href="{{ url('assets/dist/css/adminlte.min.css') }}">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{ url('assets/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ url('assets/dist/css/adminlte.min.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -296,46 +280,6 @@
     <script src="{{ url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ url('assets/dist/js/adminlte.min.js') }}"></script>
-    <!-- InputMask -->
-    <script src="{{ url('assets/plugins/moment/moment.min.js') }}"></script>
-    <script src="{{ url('assets/plugins/inputmask/jquery.inputmask.min.js') }}"></script>
-    <script src="{{ url('assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
-    <!-- bs-custom-file-input -->
-    <script src="{{ url('assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
-    <script>
-    //Date picker
-    $('#birthdate').datetimepicker({
-        format: 'L'
-    });
-    $(function () {
-        bsCustomFileInput.init();
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-            // Get the form and checkbox elements
-            var form = document.querySelector('form');
-            var checkbox = document.getElementById('check');
-
-            // Disable the submit button initially
-            var submitButton = document.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-
-            // Add event listener to the checkbox
-            checkbox.addEventListener('change', function () {
-                // Enable or disable the submit button based on the checkbox state
-                submitButton.disabled = !checkbox.checked;
-            });
-
-            // Add event listener to the form submission
-            form.addEventListener('submit', function (event) {
-                // Prevent form submission if the checkbox is not checked
-                if (!checkbox.checked) {
-                    event.preventDefault();
-                    alert('กรุณายินยอมให้เก็บข้อมูลก่อนที่จะส่งข้อมูล');
-                }
-            });
-        });
-    </script>
-
 </body>
 
 </html>

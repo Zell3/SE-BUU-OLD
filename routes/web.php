@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::resource('titles', C_titles::class);
 
 Route::get('/my-controller', [MyController::class, 'index']);

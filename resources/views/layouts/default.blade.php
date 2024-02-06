@@ -32,6 +32,11 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <form action="{{ url('/logout') }}" method="get">
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                    </form>
+                </li>
             </ul>
 
             <!-- Right navbar links -->
